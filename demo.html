@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>demo on node js</title>
+	<link rel="stylesheet" href="">
+
+	<script
+			  src="https://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous"></script>
+
+			  <script>
+			  
+			  		(function ($){
+			  			$.fn.colorChanger = function(options){
+			  				var setting = $.extend({
+			  					color: "pink"
+			  				}, options);
+			  				return this.css({
+			  					color: setting.color
+			  				});
+			  			};
+			  		}(jQuery));
+
+			  		(function($){
+			  			$.fn.manjesh =function(options){
+			  				var setting =$.extend({
+			  					backgroundColor:"green",
+			  					color: "yellow"
+			  				},options);
+			  				return this.css({
+			  					backgroundColor: setting.backgroundColor,
+			  					color:setting.color
+			  				});
+			  			};
+			  		}(jQuery));
+
+
+
+
+			  		$(document).ready (function(){
+			  			$('h1').colorChanger().next();
+			  			console.log();
+							$('h1').manjesh();
+			  			$( "p" ).colorChanger({
+							    color: "#fff"
+							});
+							$('p.abc').manjesh({
+								backgroundColor: "red",
+								color: "white"
+							});
+								$('.button').click(function(event) {
+									$('h1').colorChanger();
+									$("img").hide();		
+							});
+			  		});
+			  </script>
+	<style>
+	body{
+		margin:0;
+	}
+		.site-header{
+			padding: 20px 15px;
+			background-color:#f5f4f4; 
+		}
+		.site-header:after{
+			clear: both;
+			content: "";
+			display: block;
+		}
+		.button{
+			float:right;
+			width:100px;
+			height:30px;
+			border:2px solid green;
+			border-radius: 20px;
+			text-align: center;
+			line-height: 30px;
+			cursor: pointer;
+		}
+		.button:hover{
+			background-color: green;
+			color:#fff;
+		}
+		h2{
+			float:left;
+			margin:0;
+		}
+		.site-section:after{
+			clear: both;
+			content: "";
+			display: block;
+			
+		}
+		.blog{
+			color:#fff;
+			box-sizing: border-box;
+			padding: 30px 15px;
+			width:33.33%;
+			float:left;
+		}
+		.site-section{
+			background-color: #2b2b2b;
+		}
+		h4{
+			text-align: center;
+			font-size: 25px;
+		}
+		.banner img{
+			width:100%;
+		}
+	</style>
+
+</head>
+<body>
+<header class="site-header">
+	<h2>Manjesh</h2>
+	<div class="button">click me</div><!-- /.button -->
+</header><!-- /.site-header -->
+<div class="banner">
+	<img src="http://subhoswapno.com/publicity/images/web-development-banner.jpg" alt="" />
+</div><!-- /.banner -->
+<section class="site-section">
+	<div class="blog">
+		<h4>Blog</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quisquam, itaque ad. Reiciendis necessitatibus nulla quisquam natus consequuntur aut consectetur, aspernatur saepe. Atque dolorem commodi voluptatem reiciendis, eius nam voluptas.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quis sint aliquam cum! Veritatis dolore repellat rem recusandae possimus sit, obcaecati consequatur unde nihil soluta delectus assumenda ea qui eligendi.</p>
+	</div><!-- /.blog -->
+	<div class="blog">
+	<h4>Blog</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quisquam, itaque ad. Reiciendis necessitatibus nulla quisquam natus consequuntur aut consectetur, aspernatur saepe. Atque dolorem commodi voluptatem reiciendis, eius nam voluptas.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quis sint aliquam cum! Veritatis dolore repellat rem recusandae possimus sit, obcaecati consequatur unde nihil soluta delectus assumenda ea qui eligendi.</p>
+	</div><!-- /.blog -->
+	<div class="blog">
+	<h4>Blog</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quisquam, itaque ad. Reiciendis necessitatibus nulla quisquam natus consequuntur aut consectetur, aspernatur saepe. Atque dolorem commodi voluptatem reiciendis, eius nam voluptas.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quis sint aliquam cum! Veritatis dolore repellat rem recusandae possimus sit, obcaecati consequatur unde nihil soluta delectus assumenda ea qui eligendi.</p>
+	</div><!-- /.blog -->
+</section><!-- /.site-section -->
+<h1>Motte Manja</h1>	
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa iusto neque quam corporis omnis, consectetur exercitationem in a quo numquam incidunt temporibus, nulla magnam nam perferendis vitae fuga ut esse!</p>
+<p class="abc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae minus, officia in cupiditate sunt adipisci eaque aspernatur dolore natus? Praesentium dolores, dolorem. Beatae alias quasi voluptatum, modi sint enim, at!</p>
+
+
+</body>
+</html>
